@@ -1,0 +1,54 @@
+.table-name-txt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.table-name-txt h1 {
+    color: #242424;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.table-pic>img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+thead tr {
+    background-color: #007bff;
+    color: white;
+}
+
+table.table thead th {
+    background-color: #007bff !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500 !important;
+    color: white !important;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.card-header {
+    background-color: #dfe1e4;
+    padding: 13px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+}
+
+.custom-pagination-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
