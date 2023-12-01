@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 //Fatch data from api using Thunk
-const userLoginData = createAsyncThunk('api/getUserList', (requestParams) => {
+const userLoginData = createAsyncThunk('api/login', (requestParams) => {
     return axios.request({
         method: 'POST',
         url: process.env.REACT_APP_BACKEND_API_BASE_URL + '/api/login',
