@@ -1,12 +1,14 @@
 import React,{useEffect,useState} from "react"
 import Cookies from 'js-cookie';
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { loginState } from "../../redux/commonReducers";
 
 import "./header.css"
 
 const Header = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [getToken, setGetToken] = useState(Cookies.get('token'))
 
     const isLogin = useSelector((state) => {
@@ -16,6 +18,10 @@ const Header = () => {
     const logoutFn = () => {
         Cookies.remove('token')
         dispatch(loginState(false));
+    }
+
+    const loginBtnHandler = () => {
+        navigate('/login')   
     }
 
     useEffect(() => {
@@ -53,7 +59,7 @@ const Header = () => {
                     <form className="d-flex custom-btn" role="search">
                         {!getToken || getToken === "" || getToken === "undefined" ? (
                             <>
-                                <button className="btn btn-info button-margin-r" type="submit">Login</button>
+                                <button onClick={loginBtnHandler} className="btn btn-info button-margin-r" type="submit">Login</button>
                                 <button className="btn btn-secondary disabled" type="submit">Register</button>
                             </>
                         ) : (

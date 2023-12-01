@@ -5,6 +5,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import PublicRoute from './components/PublicRoute';
 import Loader from "./components/Loader"
 
+const NotFound = lazy(() => import('./components/NotFound'));
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const Login = lazy(() => import('./components/Login'));
 
@@ -34,13 +35,7 @@ const router = createBrowserRouter(
                 </Suspense>
 
             } />
-            <Route path="/*" element={
-                <Suspense fallback={<Loader />}>
-                    <PublicRoute>
-                        <Login />
-                    </PublicRoute>
-                </Suspense>
-            } />
+            <Route path="/*" element={<NotFound />} />
         </>
     )
 );
