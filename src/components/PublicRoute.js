@@ -5,7 +5,6 @@ const PublicRoute = ({ children }) => {
     const getToken = Cookies.get('token');
     
     if (!getToken || getToken === "" || getToken === "undefined") {
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$");
         // user is not authenticated
         return <Navigate to="/login" />;
     }
