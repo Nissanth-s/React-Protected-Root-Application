@@ -61,8 +61,6 @@ const Header = () => {
                                 logoutFn()
                             }}>Logout</button>
                         )}
-
-
                     </form>
                 </div>
             </div>
