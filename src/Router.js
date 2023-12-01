@@ -3,6 +3,7 @@ import { Route, createBrowserRouter, createRoutesFromElements } from 'react-rout
 import Cookies from 'js-cookie';
 
 import ProtectedRoute from './components/ProtectedRoute';
+import PublicRoute from './components/PublicRoute';
 import Loader from "./components/Loader"
 
 const NotFound = lazy(() => import('./components/NotFound'));
@@ -22,7 +23,13 @@ const LoginRoute = () => {
 const router = createBrowserRouter(
     createRoutesFromElements(
         <>
-            <Route path="/" element={<LoginRoute />} />
+
+            <Route path="/" element={
+                <LoginRoute />
+                // <PublicRoute>
+                //     <Login />
+                // </PublicRoute>
+            } />
             <Route path="dashboard" element={
                 <Suspense fallback={<Loader />}>
                     <ProtectedRoute>
@@ -34,6 +41,9 @@ const router = createBrowserRouter(
             <Route path="login" element={
                 <Suspense fallback={<Loader />}>
                     <LoginRoute />
+                    {/* <PublicRoute>
+                        <Login />
+                    </PublicRoute> */}
                 </Suspense>
 
             } />
