@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react"
 import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import Cookies from 'js-cookie';
 
 import ProtectedRoute from './components/ProtectedRoute';
 import PublicRoute from './components/PublicRoute';
@@ -10,25 +9,15 @@ const NotFound = lazy(() => import('./components/NotFound'));
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const Login = lazy(() => import('./components/Login'));
 
-const getToken = Cookies.get('token');
-
-const LoginRoute = () => {
-    if (!getToken || getToken === "" || getToken === "undefined") {
-        return <Login />
-    } else {
-        return <Dashboard />
-    }
-}
-
 const router = createBrowserRouter(
     createRoutesFromElements(
         <>
-
             <Route path="/" element={
-                <LoginRoute />
-                // <PublicRoute>
-                //     <Login />
-                // </PublicRoute>
+                <Suspense fallback={<Loader />}>
+                    <PublicRoute>
+                        <Login />
+                    </PublicRoute>
+                </Suspense>
             } />
             <Route path="dashboard" element={
                 <Suspense fallback={<Loader />}>
@@ -40,10 +29,9 @@ const router = createBrowserRouter(
             } />
             <Route path="login" element={
                 <Suspense fallback={<Loader />}>
-                    <LoginRoute />
-                    {/* <PublicRoute>
+                    <PublicRoute>
                         <Login />
-                    </PublicRoute> */}
+                    </PublicRoute>
                 </Suspense>
 
             } />

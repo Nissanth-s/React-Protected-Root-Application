@@ -6,7 +6,7 @@ const PublicRoute = ({ children }) => {
     
     if (!getToken || getToken === "" || getToken === "undefined") {
         // user is not authenticated
-        return <Navigate to="/login" />;
+        return children;
     }
     return <Navigate to="/dashboard" />;
 };
