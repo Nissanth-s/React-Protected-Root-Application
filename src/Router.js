@@ -24,13 +24,13 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <>
 
-            <Route path="/" element={
+            <Route exact path="/" element={
                 <LoginRoute />
                 // <PublicRoute>
                 //     <Login />
                 // </PublicRoute>
             } />
-            <Route path="dashboard" element={
+            <Route exact path="dashboard" element={
                 <Suspense fallback={<Loader />}>
                     <ProtectedRoute>
                         <Dashboard />
@@ -38,7 +38,7 @@ const router = createBrowserRouter(
                 </Suspense>
 
             } />
-            <Route path="login" element={
+            <Route exact path="login" element={
                 <Suspense fallback={<Loader />}>
                     <LoginRoute />
                     {/* <PublicRoute>
@@ -47,7 +47,7 @@ const router = createBrowserRouter(
                 </Suspense>
 
             } />
-            <Route path="/*" element={<NotFound />} />
+            <Route exact path="/*" element={<NotFound />} />
         </>
     )
 );
