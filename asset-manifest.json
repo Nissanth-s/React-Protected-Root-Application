@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Nissanth-s/React-Protected-Root-Application/static/css/main.f618f995.css",
+    "main.js": "/Nissanth-s/React-Protected-Root-Application/static/js/main.77460bba.js",
+    "static/css/751.6a15ce4d.chunk.css": "/Nissanth-s/React-Protected-Root-Application/static/css/751.6a15ce4d.chunk.css",
+    "static/js/751.7981b26f.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/751.7981b26f.chunk.js",
+    "static/css/379.9cab42da.chunk.css": "/Nissanth-s/React-Protected-Root-Application/static/css/379.9cab42da.chunk.css",
+    "static/js/379.8dedf5ae.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/379.8dedf5ae.chunk.js",
+    "static/css/249.408a2940.chunk.css": "/Nissanth-s/React-Protected-Root-Application/static/css/249.408a2940.chunk.css",
+    "static/js/249.a723201d.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/249.a723201d.chunk.js",
+    "static/js/787.d4aba7ab.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/787.d4aba7ab.chunk.js",
+    "static/js/637.b3f00508.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/637.b3f00508.chunk.js",
+    "static/js/306.d10ed2ad.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/306.d10ed2ad.chunk.js",
+    "index.html": "/Nissanth-s/React-Protected-Root-Application/index.html",
+    "main.f618f995.css.map": "/Nissanth-s/React-Protected-Root-Application/static/css/main.f618f995.css.map",
+    "main.77460bba.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/main.77460bba.js.map",
+    "751.6a15ce4d.chunk.css.map": "/Nissanth-s/React-Protected-Root-Application/static/css/751.6a15ce4d.chunk.css.map",
+    "751.7981b26f.chunk.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/751.7981b26f.chunk.js.map",
+    "379.9cab42da.chunk.css.map": "/Nissanth-s/React-Protected-Root-Application/static/css/379.9cab42da.chunk.css.map",
+    "379.8dedf5ae.chunk.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/379.8dedf5ae.chunk.js.map",
+    "249.408a2940.chunk.css.map": "/Nissanth-s/React-Protected-Root-Application/static/css/249.408a2940.chunk.css.map",
+    "249.a723201d.chunk.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/249.a723201d.chunk.js.map",
+    "787.d4aba7ab.chunk.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/787.d4aba7ab.chunk.js.map",
+    "637.b3f00508.chunk.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/637.b3f00508.chunk.js.map",
+    "306.d10ed2ad.chunk.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/306.d10ed2ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f618f995.css",
+    "static/js/main.77460bba.js"
+  ]
+}
