@@ -16,7 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const loginValidationSchema = Yup.object({
-        email: Yup.string().required('Please Enter Email'),
+        email: Yup.string().required('Please Enter Email').email("Invalid email format"),
         password: Yup.string().required('Please Enter Password')
     });
 
