@@ -12,7 +12,7 @@ const userLoginData = createAsyncThunk('api/login', (requestParams) => {
             return response.data;
         })
         .catch((error) => {
-            return error.response.data
+            throw new Error(error.response.data.error)
         })
 });
 
@@ -33,7 +33,7 @@ const userLoginDataSlice = createSlice({
         },
         [userLoginData.rejected]: (state, action) => {
             state.loading = false
-            state.error = 'Something went wrong, Please try after some time!'
+            state.error = action?.error?.message
         }
     }
 });

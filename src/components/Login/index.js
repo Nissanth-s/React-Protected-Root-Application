@@ -23,22 +23,19 @@ const Login = () => {
         (state) => state?.userLoginDataSlice
     );
 
-    if (error) {
-        toast.error(error, {
-            position: toast.POSITION.TOP_RIGHT,
-        });
-    }
-
     const loginFn = (requestParams) => {
         dispatch(userLoginData(requestParams));
     }
 
     useEffect(() => {
-        if(data.error) {
-            toast.error(data.error, {
+        if (error) {
+            toast.error(error, {
                 position: toast.POSITION.TOP_RIGHT,
-            });   
+            });
         }
+    }, [error])
+
+    useEffect(() => {
         if (data?.token) {
             Cookies.set('token', data.token, { expires: 7, secure: true });
             navigate('/dashboard')

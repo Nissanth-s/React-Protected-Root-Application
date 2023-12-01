@@ -1,17 +1,27 @@
 import React, { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./userlist.css"
 import { getgetUserListData } from "../../redux/apis/getUserListReducer";
 import Loader from "../Loader";
 
-const Dashboard = () => {
+const UserList = () => {
     const dispatch = useDispatch();
     const [requestParams, setRequestParams] = useState({ page: 1 });
 
-    const { data, loading } = useSelector(
+    const { data, loading, error } = useSelector(
         (state) => state?.getgetUserListDataSlice
     );
+
+    useEffect(() => {
+        if (error) {
+            toast.error(error, {
+                position: toast.POSITION.TOP_RIGHT,
+            });
+        }
+    }, [error])
 
     useEffect(() => {
         dispatch(getgetUserListData(requestParams));
@@ -25,6 +35,7 @@ const Dashboard = () => {
 
     return (
         <div className="card custom-margin shadow-lg bg-white rounded">
+            <ToastContainer />
             <div className="card-header">
                 User List
             </div>
@@ -73,4 +84,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default UserList;

@@ -7,6 +7,9 @@ const getgetUserListData = createAsyncThunk('api/getUserList', (requestParams = 
         .then((response) => {
             return response.data;
         })
+        .catch((error) => {
+            throw new Error(error.response.data.error)
+        })
 });
 
 const getgetUserListDataSlice = createSlice({
@@ -26,7 +29,7 @@ const getgetUserListDataSlice = createSlice({
         },
         [getgetUserListData.rejected]: (state, action) => {
             state.loading = false
-            state.error = 'Something went wrong, Please try after some time!'
+            state.error = action?.error?.message
         }
     }
 });

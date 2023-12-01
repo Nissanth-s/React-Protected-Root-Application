@@ -1,14 +1,21 @@
-import React from "react"
+import React,{useEffect,useState} from "react"
 import Cookies from 'js-cookie';
 
 import "./header.css"
 
-const Dashboard = () => {
-    const getToken = Cookies.get('token');
+const Header = () => {
+    // const getToken = Cookies.get('token');
+    const [getToken, setGetToken] = useState(Cookies.get('token'))
 
     const logoutFn = () => {
         Cookies.remove('token')
     }
+    
+    useEffect(() => {
+        // console.log("Render Header") 
+        setGetToken(Cookies.get('token')) 
+    },[])
+
     return (
         <nav className="navbar navbar-expand-lg bg-light shadow p-3 mb-5 bg-white">
             <div className="container-fluid">
@@ -41,7 +48,7 @@ const Dashboard = () => {
                         {!getToken || getToken === "" || getToken === "undefined" ? (
                             <>
                                 <button className="btn btn-info button-margin-r" type="submit">Login</button>
-                                <button className="btn btn-secondary" type="submit">Register</button>
+                                <button className="btn btn-secondary disabled" type="submit">Register</button>
                             </>
                         ) : (
                             <button className="btn btn-info button-margin-r" type="submit" onClick={() => {
@@ -57,4 +64,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default Header;

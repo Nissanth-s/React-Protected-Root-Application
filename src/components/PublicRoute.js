@@ -1,14 +1,15 @@
 import { Navigate } from "react-router-dom";
 import Cookies from 'js-cookie';
 
-const ProtectedRoute = ({ children }) => {
+const PublicRoute = ({ children }) => {
     const getToken = Cookies.get('token');
     
     if (!getToken || getToken === "" || getToken === "undefined") {
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$");
         // user is not authenticated
-        return <Navigate to="/" />;
+        return <Navigate to="/login" />;
     }
-    return children;
+    return <Navigate to="/dashboard" />;
 };
 
-export default ProtectedRoute;
+export default PublicRoute;
