@@ -1,20 +1,26 @@
 import React,{useEffect,useState} from "react"
 import Cookies from 'js-cookie';
+import { useDispatch, useSelector } from "react-redux";
+import { loginState } from "../../redux/commonReducers";
 
 import "./header.css"
 
 const Header = () => {
-    // const getToken = Cookies.get('token');
+    const dispatch = useDispatch();
     const [getToken, setGetToken] = useState(Cookies.get('token'))
+
+    const isLogin = useSelector((state) => {
+        return state.commonReducer;
+    });
 
     const logoutFn = () => {
         Cookies.remove('token')
+        dispatch(loginState(false));
     }
-    
+
     useEffect(() => {
-        // console.log("Render Header") 
         setGetToken(Cookies.get('token')) 
-    },[])
+    },[isLogin])
 
     return (
         <nav className="navbar navbar-expand-lg bg-light shadow p-3 mb-5 bg-white">

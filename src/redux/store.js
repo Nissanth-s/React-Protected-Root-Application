@@ -5,6 +5,7 @@ import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE } from 'reduxjs-toolk
 
 import getgetUserListDataSlice from "./apis/getUserListReducer"
 import userLoginDataSlice from "./apis/userLoginReducer"
+import commonReducer from "./commonReducers";
 
 const persistConfig = {
     key: process.env.REACT_APP_REDUX_PERSIST_KEY,
@@ -16,7 +17,8 @@ const persistedReducer = persistReducer(
     persistConfig,
     combineReducers({
         getgetUserListDataSlice,
-        userLoginDataSlice
+        userLoginDataSlice,
+        commonReducer
     })
 );
 
