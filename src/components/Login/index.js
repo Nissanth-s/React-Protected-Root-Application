@@ -24,7 +24,6 @@ const Login = () => {
     );
 
     if (error) {
-        console.log(error)
         toast.error(error, {
             position: toast.POSITION.TOP_RIGHT,
         });
@@ -35,7 +34,11 @@ const Login = () => {
     }
 
     useEffect(() => {
-        console.log(data);
+        if(data.error) {
+            toast.error(data.error, {
+                position: toast.POSITION.TOP_RIGHT,
+            });   
+        }
         if (data?.token) {
             Cookies.set('token', data.token, { expires: 7, secure: true });
             navigate('/dashboard')
