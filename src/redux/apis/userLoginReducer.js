@@ -11,6 +11,9 @@ const userLoginData = createAsyncThunk('api/login', (requestParams) => {
         .then((response) => {
             return response.data;
         })
+        .catch((error) => {
+            return error.response.data
+        })
 });
 
 const userLoginDataSlice = createSlice({
