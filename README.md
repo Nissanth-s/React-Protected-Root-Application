@@ -13,6 +13,10 @@ React-redux: 8
 
 In the project directory, you can run:
 
+### `npm install`
+
+The npm install command is used to install the dependencies specified in the package.json file. When you run npm install in the terminal or command prompt in the project's root directory, npm reads the dependencies and devDependencies sections of the package.json file and installs the corresponding packages into the node_modules directory.
+
 ### `npm start`
 
 Runs the app in the development mode.\
