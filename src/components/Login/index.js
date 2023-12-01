@@ -75,7 +75,11 @@ const Login = () => {
                                                     className="form-control"
                                                     placeholder="Enter Email"
                                                 />
+                                                {formik.errors.email ? (
+                                                    <div className="form-error">{formik.errors.email}</div>
+                                                ) : null}
                                             </div>
+
                                             <div className="form-group pb-3">
                                                 <Field
                                                     type="password"
@@ -83,7 +87,11 @@ const Login = () => {
                                                     className="form-control"
                                                     placeholder="Enter Password"
                                                 />
+                                                {formik.errors.password ? (
+                                                    <div className="form-error">{formik.errors.password}</div>
+                                                ) : null}
                                             </div>
+
                                             <div className="d-flex align-items-center justify-content-between">
                                                 <div className="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span className="pl-2 font-weight-bold remember">Remember Me</span></div>
                                                 <div><a href="/">Forget Password?</a></div>
