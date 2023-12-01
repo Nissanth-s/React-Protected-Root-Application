@@ -1,6 +1,6 @@
 import React from "react"
 
-const Loader = (props) => {
+const Loader = () => {
     return (
         <div className="spinner">
             <div className="spinner-grow spinnerSub" role="status">
