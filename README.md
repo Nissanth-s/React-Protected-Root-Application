@@ -82,19 +82,35 @@
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/Nissanth-s/React-Protected-Root-Application
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `.env`
+3. Enter your API in `.env`
    ```js
    const REACT_APP_BACKEND_API_BASE_URL = 'ENTER YOUR API';
    ```
+4. Runs the app in the development mode
+   ```sh
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+5. Launches the test runner in the interactive watch mode.
+   ```sh
+   npm run test
+   ```
+6. Builds the app for production to the `build` folder.
+   ```sh
+   npm run build
+   ```
+It correctly bundles React in production mode and optimizes the build for the best performance.<br />
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
