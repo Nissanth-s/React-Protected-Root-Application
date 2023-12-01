@@ -71,11 +71,11 @@ const UserList = () => {
                     </table>
                 )}
                 <div className="col-md-12 text-end">
-                    <button type="button" className={`btn btn-primary btn-sm ${data?.page <= 1 && "disabled"}`} onClick={() => {
+                    <button type="button" className={`btn pag-custom-btn btn-primary btn-sm ${data?.page <= 1 && "disabled"}`} onClick={() => {
                         pageChange(-1)
                     }}>Previous</button>
-                    <button type="button" className="btn btn-outline-success btn-sm disabled custom-pagination-btn">Page {data?.page}/{data?.total_pages}</button>
-                    <button type="button" className={`btn btn-primary btn-sm ${data?.page === data?.total_pages && "disabled"}`} onClick={() => {
+                    <button type="button" className="btn pag-custom-btn btn-outline-success btn-sm disabled custom-pagination-btn">Page {data?.page}/{data?.total_pages}</button>
+                    <button type="button" className={`btn pag-custom-btn btn-primary btn-sm ${data?.page === data?.total_pages && "disabled"}`} onClick={() => {
                         pageChange(+1)
                     }}>Next</button>
                 </div>
