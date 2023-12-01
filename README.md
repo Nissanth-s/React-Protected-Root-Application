@@ -3,11 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Dependency Versions
-Node: 16 above
-React Js: 18.2.0
-NPM: 16 above
-Bootstrap: 5
-React-redux: 8
+Node: 16 above\
+React Js: 18.2.0\
+NPM: 16 above\
+Bootstrap: 5\
+React-redux: 8\
 
 ## Available Scripts
 
