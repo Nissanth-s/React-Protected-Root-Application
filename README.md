@@ -7,7 +7,7 @@ Node: 16 above\
 React Js: 18.2.0\
 NPM: 16 above\
 Bootstrap: 5\
-React-redux: 8\
+React-redux: 8
 
 ## Available Scripts
 
