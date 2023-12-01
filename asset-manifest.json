@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Nissanth-s/React-Protected-Root-Application/static/css/main.f618f995.css",
-    "main.js": "/Nissanth-s/React-Protected-Root-Application/static/js/main.77460bba.js",
+    "main.js": "/Nissanth-s/React-Protected-Root-Application/static/js/main.c32f2580.js",
     "static/css/751.6a15ce4d.chunk.css": "/Nissanth-s/React-Protected-Root-Application/static/css/751.6a15ce4d.chunk.css",
     "static/js/751.7981b26f.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/751.7981b26f.chunk.js",
     "static/css/379.9cab42da.chunk.css": "/Nissanth-s/React-Protected-Root-Application/static/css/379.9cab42da.chunk.css",
@@ -13,7 +13,7 @@
     "static/js/306.d10ed2ad.chunk.js": "/Nissanth-s/React-Protected-Root-Application/static/js/306.d10ed2ad.chunk.js",
     "index.html": "/Nissanth-s/React-Protected-Root-Application/index.html",
     "main.f618f995.css.map": "/Nissanth-s/React-Protected-Root-Application/static/css/main.f618f995.css.map",
-    "main.77460bba.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/main.77460bba.js.map",
+    "main.c32f2580.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/main.c32f2580.js.map",
     "751.6a15ce4d.chunk.css.map": "/Nissanth-s/React-Protected-Root-Application/static/css/751.6a15ce4d.chunk.css.map",
     "751.7981b26f.chunk.js.map": "/Nissanth-s/React-Protected-Root-Application/static/js/751.7981b26f.chunk.js.map",
     "379.9cab42da.chunk.css.map": "/Nissanth-s/React-Protected-Root-Application/static/css/379.9cab42da.chunk.css.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.f618f995.css",
-    "static/js/main.77460bba.js"
+    "static/js/main.c32f2580.js"
   ]
 }
