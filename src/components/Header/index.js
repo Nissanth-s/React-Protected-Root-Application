@@ -44,7 +44,7 @@ const Header = () => {
                             <a href="/" className="nav-link disabled">Blog</a>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search">
+                    <form className="d-flex custom-btn" role="search">
                         {!getToken || getToken === "" || getToken === "undefined" ? (
                             <>
                                 <button className="btn btn-info button-margin-r" type="submit">Login</button>

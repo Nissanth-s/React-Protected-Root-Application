@@ -1,4 +1,6 @@
 .button-margin-r {
     margin-right: 15px;
-    padding-top: 0px !important;
+}
+.custom-btn button{
+    height: 40px !important;
 }
