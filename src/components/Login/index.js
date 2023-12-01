@@ -6,6 +6,7 @@ import Cookies from 'js-cookie';
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { loginState } from "../../redux/commonReducers";
 
 import "./login.css"
 import { userLoginData } from "../../redux/apis/userLoginReducer";
@@ -38,9 +39,10 @@ const Login = () => {
     useEffect(() => {
         if (data?.token) {
             Cookies.set('token', data.token, { expires: 7, secure: true });
+            dispatch(loginState(true));
             navigate('/dashboard')
         }
-    }, [data, navigate])
+    }, [data, navigate, dispatch])
 
     return (
         <div className="container custom-login">
