@@ -52,3 +52,7 @@ table.table thead th {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.pag-custom-btn{
+    height:35px;
+}
